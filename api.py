@@ -17,7 +17,7 @@ dados = {
 # Rota padrão '/'
 @app.route('/')
 def home():
-    return render_template('home.html', dados=dados)
+    return render_template('index.html', dados=dados)
 
 # Rota '/api' para retornar os dados em formato JSON
 @app.route('/api')
@@ -28,6 +28,3 @@ def api():
 @app.errorhandler(404)
 def page_not_found(error):
     return redirect('/')
-
-if __name__ == '__main__':
-    app.run(debug=True)
