@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ dados.titulo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<center>
+    <div class="container">
+        <h1>{{ dados.titulo }}</h1>
+        <p>{{ dados.conteudo }}</p>
+</center>        
+        <div class="info-box">
+            <h2>Links:</h2>
+            <ul>
+                <li><a href="{{ dados.informacoes.link1 }}" target="_blank">{{ dados.informacoes.link1 }}</a></li>
+                <li><a href="{{ dados.informacoes.link2 }}" target="_blank">{{ dados.informacoes.link2 }}</a></li>
+                <li><a href="{{ dados.informacoes.link3 }}" target="_blank">{{ dados.informacoes.link3 }}</a></li>
+                <li><a href="{{ dados.informacoes.link4 }}" target="_blank">{{ dados.informacoes.link4 }}</a></li>
+            </ul>
+            <p>Você pode consumir estas, através da <span class="code">/API</span> no endereço do seu navegador.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>
+</html>
